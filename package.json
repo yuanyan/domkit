@@ -1,0 +1,17 @@
+{
+  "name": "react-kit",
+  "version": "0.1.0",
+  "description": "React.js Toolkit",
+  "main": "index.js",
+  "author": "Yuanyan Cao",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuanyan/react-kit.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "toolkit"
+  ]
+}
