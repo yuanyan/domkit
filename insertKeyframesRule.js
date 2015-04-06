@@ -1,8 +1,10 @@
+'use strict';
+
 var insertRule = require('./insertRule');
-var vendorPrefix = require('./vendorPrefix').getVendorPrefix();
+var vendorPrefix = require('./getVendorPrefix')();
 var index = 0;
 
-function insertKeyframesRule(keyframes) {
+module.exports = function (keyframes) {
     // random name
     var name = 'anim_'+ (++index) + (+new Date);
     var css = "@" + vendorPrefix + "keyframes " + name + " {";
@@ -26,5 +28,3 @@ function insertKeyframesRule(keyframes) {
 
     return name
 }
-
-module.exports = insertKeyframesRule;

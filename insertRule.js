@@ -2,7 +2,7 @@
 
 var extraSheet;
 
-function insertRule(css) {
+module.exports = function (css) {
 
     if (!extraSheet) {
         // First time, create an extra stylesheet for adding rules
@@ -14,6 +14,6 @@ function insertRule(css) {
 
     var index = (extraSheet.cssRules || extraSheet.rules).length;
     extraSheet.insertRule(css, index);
-}
 
-module.exports = insertRule;
+    return extraSheet;
+}
