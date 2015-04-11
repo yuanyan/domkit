@@ -1,4 +1,5 @@
 'use strict';
+
 var getVendorPropertyName = require('./getVendorPropertyName');
 
 module.exports = function (target, sources){

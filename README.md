@@ -46,3 +46,34 @@ appendVendorPrefix(style);
 var getVendorPrefix = require('react-kit/getVendorPrefix');
 var vendorPrefix = getVendorPrefix(); // => -webkit-
 ```
+
+## addClass
+
+```js
+var addClass = require('react-kit/addClass');
+addClass(this.getDOMNode(), 'foo');
+```
+
+## removeClass
+
+```js
+var removeClass = require('react-kit/removeClass');
+removeClass(this.getDOMNode(), 'foo');
+```
+
+## hasClass
+
+```js
+var removeClass = require('react-kit/hasClass');
+hasClass(this.getDOMNode(), 'foo'); // => true
+```
+
+## TimeoutTransitionGroup
+
+```js
+<TimeoutTransitionGroup enterTimeout={500}
+                        leaveTimeout={500}
+                        transitionName="demo">
+    {items}
+</TimeoutTransitionGroup>
+```
