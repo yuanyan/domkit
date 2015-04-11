@@ -71,6 +71,8 @@ hasClass(this.getDOMNode(), 'foo'); // => true
 ## TimeoutTransitionGroup
 
 ```js
+var TimeoutTransitionGroup = require('react-kit/TimeoutTransitionGroup');
+
 <TimeoutTransitionGroup enterTimeout={500}
                         leaveTimeout={500}
                         transitionName="demo">
