@@ -68,7 +68,7 @@ var removeClass = require('react-kit/hasClass');
 hasClass(this.getDOMNode(), 'foo'); // => true
 ```
 
-## transitionEvents
+## transitionEventsa
 
 ```js
 var transitionEvents = require('react-kit/transitionEvents');

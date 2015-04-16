@@ -53,7 +53,7 @@ function detectEvents() {
   }
 }
 
-if(this.window){
+if(typeof window !== 'undefined'){
   detectEvents();
 }
 
