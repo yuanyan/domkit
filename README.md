@@ -68,14 +68,10 @@ var removeClass = require('react-kit/hasClass');
 hasClass(this.getDOMNode(), 'foo'); // => true
 ```
 
-## TimeoutTransitionGroup
+## transitionEvents
 
 ```js
-var TimeoutTransitionGroup = require('react-kit/TimeoutTransitionGroup');
-
-<TimeoutTransitionGroup enterTimeout={500}
-                        leaveTimeout={500}
-                        transitionName="demo">
-    {items}
-</TimeoutTransitionGroup>
+var transitionEvents = require('react-kit/transitionEvents');
+transitionEvents.addEndEventListener(node, eventListener);
+transitionEvents.removeEndEventListener(node, eventListener);
 ```
