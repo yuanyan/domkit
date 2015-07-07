@@ -64,7 +64,7 @@ removeClass(this.getDOMNode(), 'foo');
 ## hasClass
 
 ```js
-var removeClass = require('react-kit/hasClass');
+var hasClass = require('react-kit/hasClass');
 hasClass(this.getDOMNode(), 'foo'); // => true
 ```
 
