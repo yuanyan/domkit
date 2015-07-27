@@ -4,27 +4,27 @@ var insertRule = require('./insertRule');
 var vendorPrefix = require('./getVendorPrefix')();
 var index = 0;
 
-module.exports = function (keyframes) {
-    // random name
-    var name = 'anim_'+ (++index) + (+new Date);
-    var css = "@" + vendorPrefix + "keyframes " + name + " {";
+module.exports = function(keyframes) {
+  // random name
+  var name = 'anim_' + (++index) + (+new Date);
+  var css = "@" + vendorPrefix + "keyframes " + name + " {";
 
-    for (var key in keyframes) {
-        css += key + " {";
+  for (var key in keyframes) {
+    css += key + " {";
 
-        for (var property in keyframes[key]) {
-            var part = ":" + keyframes[key][property] + ";";
-            // We do vendor prefix for every property
-            css += vendorPrefix + property + part;
-            css += property + part;
-        }
-
-        css += "}";
+    for (var property in keyframes[key]) {
+      var part = ":" + keyframes[key][property] + ";";
+      // We do vendor prefix for every property
+      css += vendorPrefix + property + part;
+      css += property + part;
     }
 
     css += "}";
+  }
 
-    insertRule(css);
+  css += "}";
 
-    return name
+  insertRule(css);
+
+  return name
 }
