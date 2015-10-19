@@ -11,7 +11,6 @@ module.exports = function(prop) {
   var UpperProp = prop.charAt(0).toUpperCase() + prop.substr(1);
 
   if (domVendorPrefix) {
-
     vendorProp = domVendorPrefix + UpperProp;
     if (vendorProp in builtinStyle) {
       return vendorProp;
@@ -26,9 +25,11 @@ module.exports = function(prop) {
       if (vendorProp in builtinStyle) {
         domVendorPrefix = prefixes[i];
         return vendorProp;
-      }else {
-        return prop;
       }
+    }
+
+    if(!domVendorPrefix) {
+      return prop;
     }
   }
 }
