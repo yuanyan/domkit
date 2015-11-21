@@ -1,6 +1,6 @@
 'use strict';
 
-var builtinStyle = document.createElement('div').style;
+var builtinStyle = require('./builtinStyle');
 var prefixes = ['Moz', 'Webkit', 'O', 'ms'];
 var domVendorPrefix;
 
@@ -19,7 +19,7 @@ var flexbox = {
 }
 
 // Helper function to get the proper vendor property name. (transition => WebkitTransition)
-module.exports = function(prop) {
+module.exports = function(prop, isSupportTest) {
 
   var vendorProp;
   if (prop in builtinStyle) return prop;
@@ -55,5 +55,9 @@ module.exports = function(prop) {
     }
   }
 
-  return prop;
+  // if support test, not fallback to origin prop name
+  if (!isSupportTest) {
+    return prop;
+  }
+
 }
