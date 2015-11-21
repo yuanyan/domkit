@@ -1,4 +1,5 @@
 'use strict';
+var hasClass = require('./hasClass');
 
 module.exports = function(element, className) {
   if (hasClass(className)) {

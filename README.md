@@ -1,5 +1,5 @@
 # React Kit
-> React.js Toolkit
+> React.js DOM Toolkit
 
 ## insertKeyframesRule
 

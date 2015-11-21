@@ -1,7 +1,7 @@
 {
   "name": "react-kit",
-  "version": "0.1.9",
-  "description": "React.js Toolkit",
+  "version": "0.1.10",
+  "description": "React.js DOM Toolkit",
   "author": "Yuanyan Cao",
   "license": "MIT",
   "repository": {
