@@ -24,9 +24,9 @@ module.exports = function(prop, isSupportTest) {
   var vendorProp;
   if (prop in builtinStyle) return prop;
 
-  if(flexbox[porp]){
+  if(flexbox[prop]){
     // TODO: cache the result
-    var flexProperties = flexbox[porp];
+    var flexProperties = flexbox[prop];
     for (var i = 0; i < flexProperties.length; ++i) {
       if (flexProperties[i] in builtinStyle) {
         return flexProperties[i];
