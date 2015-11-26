@@ -12,7 +12,7 @@ var transEndEventNames = {
 
 var transEventName = getVendorPropertyName('transition', true);
 var transEndEventName = transEndEventNames[transEventName];
-var supportTransitions = !!transition;
+var supportTransitions = !!transEventName;
 
 module.exports = function(el, callback) {
   var onEndCallbackFn = function( ev ) {

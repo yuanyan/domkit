@@ -1,22 +1,22 @@
 # React Kit
-> React.js DOM Toolkit
+> Toolkit for React
 
 ## insertKeyframesRule
 
 ```js
 var insertKeyframesRule = require('react-kit/insertKeyframesRule');
 var keyframes = {
-    '0%': {
-        transform: 'scale(1)'
-    },
-    '50%': {
-        transform: 'scale(0.5)',
-        opacity: 0.7
-    },
-    '100%': {
-        transform: 'scale(1)',
-        opacity: 1
-    }
+  '0%': {
+    transform: 'scale(1)'
+  },
+  '50%': {
+    transform: 'scale(0.5)',
+    opacity: 0.7
+  },
+  '100%': {
+    transform: 'scale(1)',
+    opacity: 1
+  }
 };
 
 var animationName = insertKeyframesRule(keyframes);
@@ -35,7 +35,7 @@ insertRule(css);
 ```js
 var appendVendorPrefix = require('react-kit/appendVendorPrefix');
 var style = {
-    transform: 'scaleX(1)'
+  transform: 'scaleX(1)'
 }
 appendVendorPrefix(style);
 ```
