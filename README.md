@@ -1,10 +1,14 @@
-# React Kit
-> Toolkit for React
+# DOM Kit
+> Toolkit for DOM
+
+```
+npm install domkit --save
+```
 
 ## insertKeyframesRule
 
 ```js
-var insertKeyframesRule = require('react-kit/insertKeyframesRule');
+var insertKeyframesRule = require('domkit/insertKeyframesRule');
 var keyframes = {
   '0%': {
     transform: 'scale(1)'
@@ -25,7 +29,7 @@ var animationName = insertKeyframesRule(keyframes);
 ## insertRule
 
 ```js
-var insertRule = require('react-kit/insertRule');
+var insertRule = require('domkit/insertRule');
 var css = '.foo {}'
 insertRule(css);
 ```
@@ -33,7 +37,7 @@ insertRule(css);
 ## appendVendorPrefix
 
 ```js
-var appendVendorPrefix = require('react-kit/appendVendorPrefix');
+var appendVendorPrefix = require('domkit/appendVendorPrefix');
 var style = {
   transform: 'scaleX(1)'
 }
@@ -43,35 +47,35 @@ appendVendorPrefix(style);
 ## getVendorPrefix
 
 ```js
-var getVendorPrefix = require('react-kit/getVendorPrefix');
+var getVendorPrefix = require('domkit/getVendorPrefix');
 var vendorPrefix = getVendorPrefix(); // => -webkit-
 ```
 
 ## addClass
 
 ```js
-var addClass = require('react-kit/addClass');
+var addClass = require('domkit/addClass');
 addClass(this.getDOMNode(), 'foo');
 ```
 
 ## removeClass
 
 ```js
-var removeClass = require('react-kit/removeClass');
+var removeClass = require('domkit/removeClass');
 removeClass(this.getDOMNode(), 'foo');
 ```
 
 ## hasClass
 
 ```js
-var hasClass = require('react-kit/hasClass');
+var hasClass = require('domkit/hasClass');
 hasClass(this.getDOMNode(), 'foo'); // => true
 ```
 
 ## transitionEventsa
 
 ```js
-var transitionEvents = require('react-kit/transitionEvents');
+var transitionEvents = require('domkit/transitionEvents');
 transitionEvents.addEndEventListener(node, eventListener);
 transitionEvents.removeEndEventListener(node, eventListener);
 ```
@@ -79,7 +83,7 @@ transitionEvents.removeEndEventListener(node, eventListener);
 ## classNames
 
 ```js
-var classNames = require('react-kit/classNames');
+var classNames = require('domkit/classNames');
 
 classNames('foo', 'bar'); // => 'foo bar'
 classNames('foo', { bar: true }); // => 'foo bar'
@@ -100,7 +104,7 @@ classNames('a', arr); // => 'a b c'
 ## canUseDOM
 
 ```js
-var canUseDOM = require('react-kit/canUseDOM');
+var canUseDOM = require('domkit/canUseDOM');
 if(canUseDOM){
   // balabala
 }
@@ -109,26 +113,34 @@ if(canUseDOM){
 ## addEventListener
 
 ```js
-var addEventListener = require('react-kit/addEventListener');
+var addEventListener = require('domkit/addEventListener');
 addEventListener(window, 'scroll', handle)
 ```
 
 ## removeEventListener
 ```js
-var removeEventListener = require('react-kit/removeEventListener');
+var removeEventListener = require('domkit/removeEventListener');
 removeEventListener(window, 'scroll', handle)
 ```
 
 ## throttle
 ```js
-var throttle = require('react-kit/throttle');
+var throttle = require('domkit/throttle');
 throttle(fn, 100)
 ```
 
 ## onEndTransition
 ```js
-var onEndTransition = require('react-kit/onEndTransition');
+var onEndTransition = require('domkit/onEndTransition');
 onEndTransition(el, handle)
+```
+
+## inViewport
+```js
+var inViewport = require('domkit/inViewport');
+inViewport(el) // true if elem is in the current viewport
+inViewport(el, 100) // true if elem is in the current viewport or within 100px of it
+inViewport(el, -100) // true if elem is in the current viewport and not within 99px of the edge
 ```
 
 ## Browser Support

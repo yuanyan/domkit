@@ -1,16 +1,16 @@
 {
-  "name": "react-kit",
-  "version": "0.1.15",
-  "description": "Toolkit for React",
+  "name": "domkit",
+  "version": "0.0.1",
+  "description": "Toolkit for DOM",
   "author": "Yuanyan Cao",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yuanyan/react-kit.git"
+    "url": "https://github.com/yuanyan/domkit.git"
   },
   "keywords": [
-    "react",
-    "react-component",
+    "dom",
+    "domkit",
     "toolkit"
   ]
 }
