@@ -7,7 +7,9 @@ var index = 0;
 module.exports = function(keyframes) {
   // random name
   var name = 'anim_' + (++index) + (+new Date);
-  var css = "@" + vendorPrefix + "keyframes " + name + " {";
+  // The @-ms-keyframes prefix does not exist and will break for IE9
+  var vendorPrefixExceptMs = vendorPrefix === "-ms-" ? "" : vendorPrefix;
+  var css = "@" + vendorPrefixExceptMs + "keyframes " + name + " {";
 
   for (var key in keyframes) {
     css += key + " {";
