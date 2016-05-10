@@ -1,3 +1,5 @@
 'use strict';
 
-module.exports = document.createElement('div').style;
+var canUseDOM = require('./canUseDOM');
+
+module.exports = canUseDOM && document.createElement('div').style;
