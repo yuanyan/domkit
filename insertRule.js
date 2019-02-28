@@ -1,8 +1,11 @@
 'use strict';
 
 var extraSheet;
+var canUseDOM = require('./canUseDOM');
 
 module.exports = function(css) {
+
+  if (!canUseDOM) return;
 
   if (!extraSheet) {
     // First time, create an extra stylesheet for adding rules

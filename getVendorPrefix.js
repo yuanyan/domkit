@@ -1,8 +1,11 @@
 'use strict';
 
 var cssVendorPrefix;
+var canUseDOM = require('./canUseDOM');
 
 module.exports = function() {
+
+  if (!canUseDOM) return;
 
   if (cssVendorPrefix) return cssVendorPrefix;
 
