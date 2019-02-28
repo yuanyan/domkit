@@ -6,7 +6,7 @@ if (!Array.isArray) {
   };
 }
 
-module.exports = function () {
+module.exports = function classNames() {
 
   var classes = '';
 

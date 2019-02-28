@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(elem, type, eventHandle) {
-  if (elem == null || typeof elem === 'undefined') {
+  if (elem == null) {
     return;
   }
   if (elem.addEventListener) {
