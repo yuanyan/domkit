@@ -2,7 +2,7 @@
 
 var getVendorPropertyName = require('./getVendorPropertyName');
 
-module.exports = function(target, sources) {
+module.exports = function (target, sources) {
   var to = Object(target);
   var hasOwnProperty = Object.prototype.hasOwnProperty;
 
@@ -14,17 +14,17 @@ module.exports = function(target, sources) {
 
     var from = Object(nextSource);
 
-    for (var key in from) {
-      if (hasOwnProperty.call(from, key)) {
-        to[key] = from[key];
+    for (var i in from) {
+      if (hasOwnProperty.call(from, i)) {
+        to[i] = from[i];
       }
     }
   }
 
   var prefixed = {};
-  for (var key in to) {
-    prefixed[getVendorPropertyName(key)] = to[key]
+  for (var k in to) {
+    prefixed[getVendorPropertyName(k)] = to[k];
   }
 
-  return prefixed
-}
+  return prefixed;
+};

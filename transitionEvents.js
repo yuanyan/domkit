@@ -7,25 +7,25 @@
  */
 var EVENT_NAME_MAP = {
   transitionend: {
-    'transition': 'transitionend',
-    'WebkitTransition': 'webkitTransitionEnd',
-    'MozTransition': 'mozTransitionEnd',
-    'OTransition': 'oTransitionEnd',
-    'msTransition': 'MSTransitionEnd'
+    transition: 'transitionend',
+    WebkitTransition: 'webkitTransitionEnd',
+    MozTransition: 'mozTransitionEnd',
+    OTransition: 'oTransitionEnd',
+    msTransition: 'MSTransitionEnd'
   },
 
   animationend: {
-    'animation': 'animationend',
-    'WebkitAnimation': 'webkitAnimationEnd',
-    'MozAnimation': 'mozAnimationEnd',
-    'OAnimation': 'oAnimationEnd',
-    'msAnimation': 'MSAnimationEnd'
+    animation: 'animationend',
+    WebkitAnimation: 'webkitAnimationEnd',
+    MozAnimation: 'mozAnimationEnd',
+    OAnimation: 'oAnimationEnd',
+    msAnimation: 'MSAnimationEnd'
   }
 };
 
 var endEvents = [];
 
-function detectEvents() {
+function detectEvents () {
   var testEl = document.createElement('div');
   var style = testEl.style;
 
@@ -57,38 +57,37 @@ if (typeof window !== 'undefined') {
   detectEvents();
 }
 
-
 // We use the raw {add|remove}EventListener() call because EventListener
 // does not know how to remove event listeners and we really should
 // clean up. Also, these events are not triggered in older browsers
 // so we should be A-OK here.
 
-function addEventListener(node, eventName, eventListener) {
+function addEventListener (node, eventName, eventListener) {
   node.addEventListener(eventName, eventListener, false);
 }
 
-function removeEventListener(node, eventName, eventListener) {
+function removeEventListener (node, eventName, eventListener) {
   node.removeEventListener(eventName, eventListener, false);
 }
 
 module.exports = {
-  addEndEventListener: function(node, eventListener) {
+  addEndEventListener: function (node, eventListener) {
     if (endEvents.length === 0) {
       // If CSS transitions are not supported, trigger an "end animation"
       // event immediately.
       window.setTimeout(eventListener, 0);
       return;
     }
-    endEvents.forEach(function(endEvent) {
+    endEvents.forEach(function (endEvent) {
       addEventListener(node, endEvent, eventListener);
     });
   },
 
-  removeEndEventListener: function(node, eventListener) {
+  removeEndEventListener: function (node, eventListener) {
     if (endEvents.length === 0) {
       return;
     }
-    endEvents.forEach(function(endEvent) {
+    endEvents.forEach(function (endEvent) {
       removeEventListener(node, endEvent, eventListener);
     });
   }

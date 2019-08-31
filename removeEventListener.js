@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(elem, type, eventHandle) {
+module.exports = function (elem, type, eventHandle) {
   if (elem == null || typeof elem === 'undefined') {
     return;
   }
@@ -11,4 +11,4 @@ module.exports = function(elem, type, eventHandle) {
   } else {
     elem['on' + type] = null;
   }
-}
+};

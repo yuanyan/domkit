@@ -3,8 +3,7 @@
 var extraSheet;
 var canUseDOM = require('./canUseDOM');
 
-module.exports = function(css) {
-
+module.exports = function (css) {
   if (!canUseDOM) return;
 
   if (!extraSheet) {
@@ -19,4 +18,4 @@ module.exports = function(css) {
   extraSheet.insertRule(css, index);
 
   return extraSheet;
-}
+};

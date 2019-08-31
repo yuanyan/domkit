@@ -1,12 +1,12 @@
 'use strict';
 
-module.exports = function(fn, delay) {
+module.exports = function (fn, delay) {
   var allowSample = true;
-  return function(e) {
+  return function (e) {
     if (allowSample) {
       allowSample = false;
-      setTimeout(function() { allowSample = true; }, delay);
+      setTimeout(function () { allowSample = true; }, delay);
       fn(e);
     }
   };
-}
+};

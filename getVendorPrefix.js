@@ -3,8 +3,7 @@
 var cssVendorPrefix;
 var canUseDOM = require('./canUseDOM');
 
-module.exports = function() {
-
+module.exports = function () {
   if (!canUseDOM) return;
 
   if (cssVendorPrefix) return cssVendorPrefix;
@@ -12,5 +11,7 @@ module.exports = function() {
   var styles = window.getComputedStyle(document.documentElement, '');
   var pre = (Array.prototype.slice.call(styles).join('').match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o']))[1];
 
-  return cssVendorPrefix = '-' + pre + '-';
-}
+  cssVendorPrefix = '-' + pre + '-';
+
+  return cssVendorPrefix;
+};

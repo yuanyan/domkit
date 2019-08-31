@@ -1,6 +1,6 @@
 {
   "name": "domkit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Toolkit for DOM",
   "author": "Yuanyan Cao",
   "license": "MIT",
@@ -12,5 +12,16 @@
     "dom",
     "domkit",
     "toolkit"
-  ]
+  ],
+  "scripts": {
+    "lint": "eslint --fix *.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
 }
